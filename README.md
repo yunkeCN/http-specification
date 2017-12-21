@@ -39,6 +39,22 @@
 ### 查询用GET，修改用POST
 
 ### 提交数据长度超过1024b的要采用post方式
+复杂数据结构采用`application/json`格式，例如以下多层结构:
+```js
+{
+  filters:[
+    {
+      name: 'n1',
+      value: 'v1'
+    },
+    {
+      name: 'n2',
+      value: 'v2'
+    },
+  ]
+}
+```
+
 
 ### 空值字段返回时key要保留，值设置为`null`
 例如data属性p2为空:
